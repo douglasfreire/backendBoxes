@@ -35,7 +35,7 @@ app.use('/files', express.static(path.resolve(__dirname, '..', 'tmp')));
 app.use(require('./routes'));
 
 //Deploy para o Heroku
-server.listen(process.env.PORT || 8000);
+//server.listen(process.env.PORT || 8000);
 
 //Localhost
-//server.listen(8000)
+server.listen(8000)

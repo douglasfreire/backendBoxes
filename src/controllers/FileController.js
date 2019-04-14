@@ -1,5 +1,5 @@
-const File = require('../models/File');
-const Box = require('../models/Box');
+const File = require('../model/File');
+const Box = require('../model/Box');
 
 class FileController {
    async store(req, res){

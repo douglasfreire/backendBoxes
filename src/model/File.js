@@ -17,10 +17,10 @@ const File = new mongoose.Schema({
 });
 File.virtual('url').get(function() {
     //Para rodar somente localhost comentar a linha 20
-    const url = process.env.URL || 'http://localhost:3000'
+    //const url = process.env.URL || 'http://localhost:8000'
     //Para rodar somente localhost, comentar a linha 22 e descomentar a linha 23
-    return `${url}/files/${encodeURIComponent(this.path)}`; 
-    //return `http://localhost:3000/files/${encodeURIComponent(this.path)}`;  
+    //return `${url}/files/${encodeURIComponent(this.path)}`; 
+    return `http://localhost:8000/files/${encodeURIComponent(this.path)}`;  
 })
 
 module.exports = mongoose.model('File', File);
