@@ -12,6 +12,10 @@ routes.get('/boxes/:id', BoxController.show);
 routes.post('/boxes/:id/files', multer(multerConfig).single('file'), FileController.store);
 
 
-//req: representa a requisição feita para o servidor.
-//res: representa a resposta que vai retornar para o cliente.
+routes.get("/", (req, res) => {
+
+    return res.send("Server ON BackEnd Ativo!! ");
+
+});
+
 module.exports = routes;

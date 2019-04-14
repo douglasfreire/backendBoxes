@@ -22,7 +22,7 @@ mongoose.connect('mongodb+srv://douglas:rocket123@cluster0-1wf2h.mongodb.net/omn
     useNewUrlParser:true
 })
 
-app.use((req, res) => {
+app.use((req, res, next) => {
     req.io = io;
 
     return next();
@@ -32,7 +32,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/files', express.static(path.resolve(__dirname, '..', 'tmp')));
 
-app.use(require('./routes'))
+app.use(require('./routes'));
 
 //Deploy para o Heroku
 server.listen(process.env.PORT || 3000);
