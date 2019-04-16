@@ -17,7 +17,7 @@ io.on('connection', socket => {
     })
 });
 
-mongoose.connect('mongodb+srv://douglas:rocket123@cluster0-1wf2h.mongodb.net/omnistack?retryWrites=true', 
+mongoose.connect('mongodb+srv://[user]:[password]@cluster0-1wf2h.mongodb.net/omnistack?retryWrites=true', 
 {
     useNewUrlParser:true
 })
